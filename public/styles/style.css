@@ -1,0 +1,261 @@
+@import url("/styles/header.css");
+@import url("/styles/entry_window.css");
+@import url("/styles/slider_main.css");
+@import url("/styles/slider_hits.css");
+@import url("/styles/reviews_home.css");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@300&family=Roboto&display=swap');
+
+:root {
+    --background_decor: url(/images/diet-cover.jpeg);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #00000099;
+    position: relative;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style-type: none;
+    margin: 0 30px;
+}
+
+/* p, h2 {
+    margin: 0;
+} */
+
+section {
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.consult {
+    text-align: start;
+}
+
+.container {
+    max-width: 1140px;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    /* border: solid 1px cadetblue */
+}
+
+.consult {
+    border: double 3px #c9af94;
+    padding: 10px;
+}
+
+.consult_btn_wrapper {
+    display: flex;
+    justify-content: end;
+}
+
+.consult_btn {
+    height: 60px;
+    background-color: transparent;
+    border: solid 1px #c9af94;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 0;
+    text-align: center;
+}
+
+.consult_link {
+    display: block;
+    height: 100%;
+    margin: 0 10px;
+    line-height: 60px;
+}
+
+.consult_btn:hover {
+    background-color: #c9af9461;
+}
+
+.decor {
+    width: 100%;
+    height: 300px;
+    /* background: url(./Assets/diet-cover.jpeg) center center no-repeat; */
+}
+
+.health_second {
+    background-color: #f9faff;
+}
+ 
+.back {
+    height: 100%;
+    background: var(--background_decor) center center no-repeat;
+    /* opacity: 60%; */
+}
+
+.eat {
+    margin: 0;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer {
+    height: 250px;
+    background-color: #9898b3;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.footer_container ul{
+    display: flex;
+    justify-content: end;
+}
+
+.health_content {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 7fr 3fr;
+    gap: 20px;
+
+}
+
+.content {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+    /* background-color: blueviolet; */
+    border: 2px solid #9898b3;
+    overflow: hidden;
+    padding: 5px;
+    height: 300px;
+}
+
+.content_wrap {
+    text-align: center;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 100%;
+}
+
+.content_img_wrap {
+    align-self: center;
+}
+
+.content_wrap img {
+    max-width: 100%;
+    max-height: 200px;
+}
+
+.content_title {
+    font-size: 36px;
+}
+
+.content_text {
+    margin: 10px;
+    overflow: auto;
+}
+
+.details {
+    border: solid 1px #00000099;
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 2px;
+    background-color: #eaebf2;
+    cursor: pointer;}
+
+.top-goods {
+    width: 200px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.top-goods-img {
+    width: 100%;
+}
+
+.top-goods-slider {
+    display: none;
+    /* display: flex; */
+    justify-content: space-between;
+}
+
+.adver {
+    width: 100%;
+}
+
+.adver_content {
+    position: sticky;
+    top: 0;
+    order: 1;
+}
+
+.top-goods-title {
+    text-align: center;
+    display: none;
+}
+
+/* .reg {
+    width: 100%;
+    height: 35px;
+    background-color: cadetblue;
+    cursor: pointer;
+} */
+
+.sale_info {
+    color: cadetblue;
+    font-size: 36px;
+}
+
+.network, .network_logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-size: contain;
+}
+
+.network_logo {
+    display: block;
+}
+
+.advantage {
+    list-style-type: decimal;
+    margin-bottom: 10px;
+}
+
+.review-wrap {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.reviewer {
+    display: flex;
+    justify-content: left;
+}
+
+.review-photo {
+    aspect-ratio: 1 / 1;
+    width: 25%;
+    border: solid 1px green
+}
+
+.review-product {
+    font-weight: bold;
+}

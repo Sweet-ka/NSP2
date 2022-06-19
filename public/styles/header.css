@@ -1,0 +1,113 @@
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+.header {
+    align-items: center;
+    background-color: black;
+    color: white;
+    /* position: fixed;
+    height: 80px; */
+}
+
+.header_title {
+    display: none;
+}
+
+.header_nav {
+    font-size: 20px;
+}
+
+.header_nav_list {
+    display: flex;
+    margin: 20px 0;
+}
+
+.header_nav_list li,
+.reg {
+    border: solid 1px #c9af94;
+    border-radius: 4px;
+    padding: 2px;
+    width: 100px;
+    text-align: center;
+    height: 21px;
+    line-height: 17px;
+}
+
+.logo {
+    display: flex;
+    color: #c9af94
+}
+
+.logo_link, .menu {
+    cursor: pointer;
+}
+
+.menu {
+    font-size: 12px;
+    text-align: center;
+    display: block;
+}
+
+.menu:hover {
+    color: #c9af94;
+}
+
+.logo_img {
+    max-width: 70px;
+}
+
+.with {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.with_name {
+    line-height: 10px;
+    margin: 26px 0 0px;
+    font-size: 20px
+}
+
+.with_with {
+    margin: 5px 0 0;
+    font-size: 11px;
+}
+
+.natures {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+}
+
+.autor_wrap {
+    display: flex;
+    justify-content: end;
+}
+
+.registr_btn {
+    margin-left: 12px;
+}
+
+.registr_btn, .autor_btn {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: transparent;
+    border: solid 1px;
+}
+
+.reg {
+    width: max-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: transparent;
+    color: #ffffff;
+}
+
+.reg:hover {
+    background: #c9af94;
+    color: #000000;
+}

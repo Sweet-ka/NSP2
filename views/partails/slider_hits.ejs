@@ -1,0 +1,25 @@
+<div class="slider" data-slider="chiefslider">
+    <div class="slider__container">
+        <div class="slider__control_wrapper"><a href="#" class="slider__control" data-slide="prevSlide"></a></div>
+        <div class="slider__wrapper">
+            <div class="slider__items">
+                <% for (let i=0; i < 6; i++) {%>
+                    <div class="slider__item">
+                        <div class="card" style="width: 18rem;">
+                            <img src="" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Карточка №<%=i+1%></h5>
+                                <p class="card-text">Небольшой пример текста, который должен основываться на названии
+                                    карточки и составлять основную часть содержимого карты.</p>
+                                <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+                            </div>
+                        </div>
+                    </div>
+                <%}%>
+            </div>
+        </div>
+        <div class="slider__control_wrapper"><a href="#" class="slider__control" data-slide="nextSlide"></a></div>
+       
+    </div>
+    <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+</div>

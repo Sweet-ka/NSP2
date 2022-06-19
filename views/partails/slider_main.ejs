@@ -1,0 +1,28 @@
+<div class="itcss">
+    <div class="itcss__wrapper">
+        <div class="itcss__items">
+            <% for (let i=0; i < content_slider.length; i++) {%>
+                <div class="itcss__item">
+                    <div class="itcss__item_inner">
+                        <div class="itcss__item_inner_text">
+                            <div class="itcss__item_inner_title">
+                                <%= content_slider[i].title %>
+                            </div>
+                            <div class="itcss__item_inner_group">
+                                <%= content_slider[i].group %>
+                            </div>
+                            <button class="itcss__item_inner_btn">
+                                <%= content_slider[i].button %>
+                            </button>
+                        </div>
+                        <div class="itcss__item_inner_image">
+                            <img src="<%= content_slider[i].image %>"></img>
+                        </div>
+                    </div>
+                </div>
+            <%}%>
+        </div>
+    </div>
+    <a class="itcss__control itcss__control_prev" href="#" role="button" data-slide="prev"></a>
+    <a class="itcss__control itcss__control_next" href="#" role="button" data-slide="next"></a>
+</div>

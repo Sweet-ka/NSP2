@@ -1,0 +1,142 @@
+.entry_window, .reg_window {
+    width: 480px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 0 auto;
+    padding: 16px;
+    position: fixed;
+    top: 200px;
+    left: calc(50vw - 240px);
+    z-index: 999;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 10px 10px 10px 10px rgba(34, 60, 80, 0.2);
+    display: none;
+}
+
+.close_wrap, .reg_close_wrap {
+    display: flex;
+    justify-content: end;
+}
+
+.entry_form, .reg_form {
+    width: 100%;
+    height: 100%;
+}
+
+.form_window_input {
+    padding: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.entry,
+.reg {
+    /* width: 100%;
+    height: 35px;
+    background-color: cadetblue;
+    cursor: pointer; */
+    text-align: center;
+}
+
+.form_name,
+.reg_form_name {
+    text-align: center;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.login_label,
+.email_label,
+.reg_email_label,
+.password_label,
+.forget {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 0;
+    color: #b0b3b8;
+    position: relative;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.forget {
+    position: absolute;
+    right: 0;
+}
+
+.name_input,
+.login_input,
+.form_window_input,
+.reg_email_input,
+.password_input {
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 40px;
+    background-color: #fff;
+    border: solid 1px #9898b3;
+    border-radius: 4px;
+    outline: none;
+}
+
+.email_wrap,
+.login_wrap,
+.reg_email_wrap,
+.password_wrap,
+.entry_btn_wrap,
+.reg_btn_wrap,
+.confirm_reg_btn_wrap {
+    margin: 16px;
+}
+
+.email_wrap,
+.password_wrap,
+.login_wrap {
+    text-align: left;
+}
+
+.entry_btn,
+.confirm_reg_btn {
+    min-width: 90px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #9898b3;
+}
+
+.reg_btn, .forget {
+    border: none;
+    background-color: transparent;
+}
+
+.forget {
+    color: cadetblue;
+}
+
+.info_wrap {
+    text-align: left;
+}
+
+.login_info,
+.reg_email_info,
+.email_info,
+.password_info {
+    color: red;
+    font-size: 12px;
+    margin: 0;
+    height: 22px;
+}
+
+.block {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    filter: brightness(0.5);
+    opacity: 50%;
+    z-index: 900;
+    top: 0;
+}

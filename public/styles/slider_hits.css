@@ -1,0 +1,147 @@
+/*!
+* chiefSlider
+*   site: https://itchief.ru/javascript/slider
+*   github: https://github.com/itchief/ui-components
+*
+* Copyright 2018-2021 Alexander Maltsev
+* Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
+*/
+
+.slider {
+    position: relative;
+  }
+  
+  .slider__container {
+      position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 4% 92% 4%;
+    grid-template-rows: 100%;
+
+  }
+  
+  .slider__wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider__items {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slider_disable-transition {
+    transition: none;
+  }
+  
+  .slider__item {
+      display: flex;
+      justify-content: center;
+    flex: 0 0 100%;
+    max-width: calc(100% / 3);
+    user-select: none;
+    /* border: solid 1px red; */
+    text-align: center;
+  }
+  
+  /* кнопки влево и вправо */
+  .slider__control_wrapper{
+      position: relative;
+  }
+  
+  .slider__control {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    background: rgb(0 0 0 / 20%);
+    transform: translateY(-50%);
+  }
+  
+  .slider__control_hide {
+    display: none;
+  }
+  
+  .slider__control[data-slide="prevSlide"] {
+    left: 0;
+  }
+  
+  .slider__control[data-slide="nextSlide"] {
+    right: 0;
+  }
+  
+  .slider__control:hover,
+  .slider__control:focus {
+    color: #fff;
+    text-decoration: none;
+    background: rgb(0 0 0 / 30%);
+    outline: 0;
+  }
+  
+  .slider__control::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+  
+  .slider__control[data-slide="prevSlide"]::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  }
+  
+  .slider__control[data-slide="nextSlide"]::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  }
+  
+  /* индикаторы */
+  
+  .slider__indicators {
+    /* position: absolute; */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-right: 15%;
+    margin-bottom: 0;
+    margin-left: 15%;
+    padding-left: 0;
+    list-style: none;
+    height: 30px;
+    align-items: center;
+  }
+  
+  .slider__indicator {
+    flex: 0 1 auto;
+    box-sizing: content-box;
+    width: 30px;
+    height: 5px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    background-color: #c9af9461;
+    background-clip: padding-box;
+    height: 30px;
+    /* border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent; */
+    cursor: pointer;
+    height: 10px;
+    border-radius: 4px;
+  }
+  
+  .slider__indicator.active {
+    background-color: #c9af94;
+  }
+
+  .card {
+      border: solid 1px #c9af9461;
+  }
