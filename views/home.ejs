@@ -3,8 +3,9 @@
 
 <head>
     <%- include('./partails/head.ejs')%>
-    <script defer src="/simple-adaptive-slider.js"></script>
+<script defer src="/simple-adaptive-slider.js"></script>
 <script defer src="/slider_hits.js"></script>
+<script defer src="/header.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     // инициализация слайдера
@@ -14,13 +15,13 @@
       swipe: true
     });
 
-    const $slider = document.querySelector('[data-slider="chiefslider"]');
-    const slider_hits = new ChiefSlider($slider, {
-      loop: true,
-      autoplay: false,
-      interval: 5000,
-      refresh: true,
-    });
+    // const $slider = document.querySelector('[data-slider="chiefslider"]');
+    // const slider_hits = new ChiefSlider($slider, {
+    //   loop: true,
+    //   autoplay: false,
+    //   interval: 5000,
+    //   refresh: true,
+    // });
   });  
 </script>
 
@@ -54,16 +55,14 @@
                     <%- include('./partails/slider_hits.ejs')%>
                 </section>
                 <section class="reviews">
-                    <h2>Отзывы о продукции</h2>
                     <%- include('./partails/reviews_home.ejs')%>
                 </section>
     
             </div>
         </main>
-        <footer>
-
-        </footer>
-        <%- include('./partails/registr.ejs')%>
+            <%- include('./partails/footer.ejs')%>
+            <%- include('./partails/entry.ejs')%>
+            <%- include('./partails/registr.ejs')%>
             <div class="block block_reg"></div>
             <script src="/index.js" type="module">scr</script>
 </body>

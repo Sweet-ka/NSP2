@@ -12,16 +12,12 @@
     -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     box-shadow: 10px 10px 10px 10px rgba(34, 60, 80, 0.2);
     display: none;
+    color: #00000099;
 }
 
 .close_wrap, .reg_close_wrap {
     display: flex;
     justify-content: end;
-}
-
-.entry_form, .reg_form {
-    width: 100%;
-    height: 100%;
 }
 
 .form_window_input {
@@ -31,33 +27,29 @@
 }
 
 .entry,
-.reg {
-    /* width: 100%;
-    height: 35px;
-    background-color: cadetblue;
-    cursor: pointer; */
+.reg_wrap {
     text-align: center;
 }
 
-.form_name,
+.entry_form_name,
 .reg_form_name {
     text-align: center;
     font-weight: 700;
-    color: #1a1a1a;
+    /* color: #1a1a1a; */
     margin: 0;
     font-size: 18px;
     font-weight: 700;
 }
 
-.login_label,
-.email_label,
+.reg_login_label,
+.entry_email_label,
 .reg_email_label,
-.password_label,
+.entry_password_label,
 .forget {
     font-size: 13px;
     line-height: 20px;
     padding: 0;
-    color: #b0b3b8;
+    /* color: #b0b3b8; */
     position: relative;
     /* display: flex;
     justify-content: space-between; */
@@ -69,7 +61,7 @@
 }
 
 .name_input,
-.login_input,
+.reg_input_form_login,
 .form_window_input,
 .reg_email_input,
 .password_input {
@@ -83,9 +75,9 @@
 }
 
 .email_wrap,
-.login_wrap,
+.reg_login_wrap,
 .reg_email_wrap,
-.password_wrap,
+.entry_password_wrap,
 .entry_btn_wrap,
 .reg_btn_wrap,
 .confirm_reg_btn_wrap {
@@ -93,26 +85,39 @@
 }
 
 .email_wrap,
-.password_wrap,
-.login_wrap {
+.reg_email_wrap,
+.entry_password_wrap,
+.reg_login_wrap {
     text-align: left;
+    position: relative;
 }
 
 .entry_btn,
-.confirm_reg_btn {
+.entry_reg_btn,
+.entry_back_btn,
+.confirm_reg_btn,
+.reg_back_btn {
     min-width: 90px;
     height: 50px;
+    border: solid 1px #c9af9461;
     border-radius: 4px;
-    background-color: #9898b3;
+    background-color: #c9af9461;
 }
 
-.reg_btn, .forget {
-    border: none;
+.form_btn:hover {
+    background-color: #c9af94;
+}
+
+.entry_reg_btn,
+.entry_back_btn,
+.reg_back_btn {
     background-color: transparent;
 }
 
 .forget {
-    color: cadetblue;
+    border: none;
+    background-color: transparent;
+    color: #9898b3;
 }
 
 .info_wrap {
@@ -139,4 +144,12 @@
     opacity: 50%;
     z-index: 900;
     top: 0;
+}
+
+.close {
+    position: absolute;
+    right: 16px;
+    border: solid 1px #c9af9461;
+    color: #00000099;
+    background-color: #c9af9461;
 }

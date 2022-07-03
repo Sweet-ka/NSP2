@@ -31,7 +31,8 @@
     border: solid 1px #c9af94;
     border-radius: 4px;
     padding: 2px;
-    width: 100px;
+    min-width: 100px;
+    padding: 0 10px;
     text-align: center;
     height: 21px;
     line-height: 17px;

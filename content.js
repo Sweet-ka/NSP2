@@ -1,4 +1,3 @@
-
 exports.content_blog = [
     {
         title: 'Content 1',
@@ -97,7 +96,7 @@ content_slider = [
         button: 'Купить',
         image: '/images/content/slider_main_images/mirror.webp',
     }
-]
+];
 
 nutr_text = [
         '\
@@ -115,4 +114,23 @@ nutr_text = [
          когда нужно изменить пищевые привычки, составить рацион и режим питания, \
          определить необходимое суточное потреблений калорий.\
          '
-]
+];
+
+
+// exports.hitsA = async function() {
+//     const res = await fetch('http://127.0.0.1:3000/goods', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json;charset=utf-8'
+//         },
+//     })
+
+//     return await res.json()
+    // res.json().then((data) => {
+    //     console.log(data)
+    //         return data;
+    // })
+// };
+
+// exports.hitsA;
+// console.log('ggg', hitsA())

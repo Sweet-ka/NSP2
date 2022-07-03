@@ -18,4 +18,8 @@ router.get('/reviews', (reg, res) => {
     res.render('reviews.ejs');
 })
 
+router.get('/goods', (reg, res) => {
+    res.render('goods.ejs');
+})
+
 module.exports = router;
