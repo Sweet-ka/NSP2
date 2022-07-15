@@ -57,6 +57,15 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 100%;
+    margin-bottom: 30px;
+}
+
+.new_review_goods_photo_img {
+    height: 150px;
+}
+
+.new_review_goods_group {
+    font-size: 12px;
 }
 
 .new_review {

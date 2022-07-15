@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partails/head.ejs')%>
+</head>
+<body class="body">
+    <%- include('../partails/header.ejs')%>
+    <main>
+        <div class="container">
+            <h2 class="category_label"></h2>
+            <div class="goods">
+                <div class="field">
+                    <div class="field_menu_wrapper">
+                        <div class="field_menu">
+                            <a class="category_btn all_goods" href="?" data-category="Все товары">
+                                <p>Все продукты</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="field_display">
+                        <div class="field_card_wrapper"></div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </main>
+    <%- include('../partails/footer.ejs')%>
+    <script src="/scripts/categories.js" type="module"></script>
+</body>

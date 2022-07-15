@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partails/head.ejs')%>
+  <script defer src="/src/pages/home/slider_main/slider_main.js"></script>
+  <script defer src="/src/pages/home/slider_hits/slider_hits.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // if (location.hash === '#home') {
+      //   sliderinit();
+      // } else {
+      //   window.addEventListener('hashchange', ifHome);
+      // }
+      sliderinit()
+      
+      // function ifHome() {
+      //   if (location.hash === '#home') {
+      //     sliderinit();
+      //     window.removeEventListener('hashchange', ifHome);
+      //   };
+      // };
+
+      // инициализация слайдера
+      function sliderinit() {
+        var slider = new ItcSimpleSlider('.itcss', {
+          loop: true,
+          autoplay: true,
+          swipe: true
+        });
+    
+        const $slider = document.querySelector('[data-slider="chiefslider"]');
+        const slider_hits = new ChiefSlider($slider, {
+          loop: true,
+          autoplay: false,
+          interval: 5000,
+          refresh: true,
+        });
+      }
+    });  
+  </script>
+  
+</head>
+<body class="body">
+      <script src="/index.js" type="module">scr</script>
+</body>
+
+</html>

@@ -1,14 +1,9 @@
-const menu = document.querySelectorAll('.menu');
-// menu.forEach((elem) => {
-//     elem.addEventListener('click')
-// })
+import { Base } from "../src/base/base.js";
 
-window.addEventListener('popstate', herfchange);
-
-function herfchange(){ 
-    var href = location.href;
-    // menu.forEach((elem) => {
-    //     elem.addEventListener('click')
-    // })
-    console.log(href)
+class Header extends Base() {
+    constructor(parentNode, className) {
+        super(parentNode, 'header', className);
+    }
 }
+
+export const header = new Header(document.body, 'header');

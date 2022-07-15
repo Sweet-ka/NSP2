@@ -6,6 +6,8 @@ const {  } = require('./content');
 const mysql  = require ( 'mysql2' );
 const config = require('./config/default.json');
 const fs = require ('fs');
+const { constants } = require('fs');
+
 
 app.set('view engine', 'ejs');
 
@@ -13,14 +15,11 @@ app.use(bodyParser.urlencoded( {extended: true} ));
 app.use(bodyParser.json());
 app.use(todoRoutes);
 app.use(express.static("public"))
+  
 
 app.get("/", function( req, res ) {
     res.render('home.ejs');
 });
-
-app.listen(3000, function() {
-    console.log('work port 3000');
-})
 
 const connection_start = () => {
     return mysql.createConnection({
@@ -61,7 +60,7 @@ app.post('/', async (req, res) => {
 });
 
 // получить перечень товаров
-app.post('/goods', async(req, res) => {
+app.post('/getgoodsall', async(req, res) => {
     const pool = connection_start();
     connection_start()
 
@@ -113,12 +112,11 @@ app.post('/reviews', async(req, res) => {
     });
 });
 
-app.get('/goods', async(req, res) => {
+app.get('/getgoodsbyid', async(req, res) => {
     const pool = connection_start();
-    connection_start()
 
     const treat = new Promise((resolve, rejekt) => {
-        pool.query('SELECT * FROM `goods` WHERE 1', function (err, results) {
+        pool.query(`SELECT * FROM goods WHERE id=${req.query.id}`, function (err, results) {
             if(err) {
                 rejekt(console.log(err));
             } else {
@@ -131,3 +129,74 @@ app.get('/goods', async(req, res) => {
         console.log('подключение остановлено')
     });
 })
+
+app.get('/getgoodsbygroupid', async(req, res) => {
+    let params;
+    req.query.goodsGroupID ? params = `goodsGroupID=${req.query.goodsGroupID}` : params = 1
+
+    const pool = connection_start();
+
+    const treat = new Promise((resolve, rejekt) => {
+        pool.query(`SELECT * FROM goods WHERE ${params}`, function (err, results) {
+            if(err) {
+                rejekt(console.log(err));
+            } else {
+                resolve(results);
+            }
+        })
+    })  
+    res.send(await treat);
+    pool.end(()=>{
+        console.log('подключение остановлено')
+    });
+})
+
+app.get('/getgoodsgroup', async(req, res) => {
+
+    const pool = connection_start();
+
+    const treat = new Promise((resolve, rejekt) => {
+        pool.query(`SELECT id, groupName, groupCode FROM goodsGroup WHERE 1`, function (err, results) {
+            if(err) {
+                rejekt(console.log(err));
+            } else {
+                resolve(results);
+            }
+        })
+    })  
+    res.send(await treat);
+    pool.end(()=>{
+        console.log('подключение остановлено')
+    });
+})
+
+app.get('/getgoodscat', async(req, res) => {
+    let params;
+    req.query.goodsGroupID ? params = `goodsGroupID=${req.query.goodsGroupID}` : params = 1
+    const pool = connection_start();
+
+    const treat = new Promise((resolve, rejekt) => {
+        pool.query(`SELECT id, category FROM goodsCategories WHERE ${params}`, function (err, results) {
+            if(err) {
+                rejekt(console.log(err));
+            } else {
+                resolve(results);
+            }
+        })
+    })  
+    res.send(await treat);
+    pool.end(()=>{
+        console.log('подключение остановлено')
+    });
+})
+
+app.get("*",function(req,res){
+    res.render('notfound.ejs');
+});
+
+   
+app.listen(3000, function() {
+    console.log('work port 3000');
+})
+
+  
