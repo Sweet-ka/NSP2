@@ -18,13 +18,11 @@ async function addGroup() {
         goods_group_list.appendChild(li);
         li.appendChild(a);
         a.appendChild(p);
-        //const href = ('/goods/category?goodsCode');
 
         const href = ('/goods/' + goodsCode).toLowerCase();
         a.setAttribute('href', href);
         a.setAttribute('data-id', goodsID);
         p.innerText = goodsGroup;
-
     }
 }
 

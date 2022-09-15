@@ -5,6 +5,7 @@
 @import url("/styles/reviews_home.css");
 @import url("/styles/footer.css");
 @import url("/styles/goods.css");
+@import url("/styles/card.css");
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@300&family=Roboto&display=swap');
 
 :root {
@@ -13,7 +14,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Fira sans', sans-serif;
 }
 
 .body {
@@ -84,18 +85,20 @@ section {
     border: solid 1px #c9af94;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 10px;
     padding: 0;
     text-align: center;
-    padding: 0 10px;
 }
 
-/* .consult_link {
+.get_consult_btn{
+    margin-left: 10px;
+}
+
+.consult_link {
     display: block;
     height: 100%;
     margin: 0 10px;
     line-height: 60px;
-} */
+}
 
 .consult_btn:hover {
     background-color: #c9af9461;

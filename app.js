@@ -38,7 +38,7 @@ const sqlAddUser = (obj) => {
  
 app.post('/', async (req, res) => {
     const pool = connection_start()
-    connection_start()
+    // connection_start()
 
     const treat = new Promise((resolve, rejekt) => {
         if(req.body){
@@ -61,7 +61,7 @@ app.post('/', async (req, res) => {
 
 // получить перечень товаров
 app.post('/getgoodsall', async(req, res) => {
-    const pool = connection_start();
+    // const pool = connection_start();
     connection_start()
 
     const treat = new Promise((resolve, rejekt) => {
@@ -95,10 +95,29 @@ app.post('/writejson', async(req, res) => {
 // получить 4 отзыва
 app.post('/reviews', async(req, res) => {
     const pool = connection_start();
-    connection_start()
+    // connection_start()
 
     const treat = new Promise((resolve, rejekt) => {
         pool.query('SELECT * FROM `reviews` WHERE 1', function (err, results) {
+            if(err) {
+                rejekt(console.log(err));
+            } else {
+                resolve(results);
+            }
+        })
+    })      
+    res.send(await treat);
+    pool.end(()=>{
+        console.log('подключение остановлено')
+    });
+});
+
+app.get('/getReviewByID', async(req, res) => {
+    const pool = connection_start();
+    console.log(req.query.id)
+
+    const treat = new Promise((resolve, rejekt) => {
+        pool.query(`SELECT * FROM reviews WHERE id_goods='${req.query.id}'`, function (err, results) {
             if(err) {
                 rejekt(console.log(err));
             } else {
@@ -116,7 +135,7 @@ app.get('/getgoodsbyid', async(req, res) => {
     const pool = connection_start();
 
     const treat = new Promise((resolve, rejekt) => {
-        pool.query(`SELECT * FROM goods WHERE id=${req.query.id}`, function (err, results) {
+        pool.query(`SELECT * FROM goods WHERE id='${req.query.id}'`, function (err, results) {
             if(err) {
                 rejekt(console.log(err));
             } else {

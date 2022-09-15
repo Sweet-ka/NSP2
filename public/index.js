@@ -229,7 +229,6 @@ function addReviewsFromJson (json) {
     for (let i = 0; i < parentText.length; i++) {
         parentText[i].innerHTML = dataJson[i].review;
         parentName[i].innerHTML = `user ${i + 1}`;
-        console.log(parentAvatar[i])
         parentAvatar[i].style.backgroundImage = `url(/images/avatars/id_${dataJson[i].id}.jpeg)`;
 
         //parentAvatar[i].innerHTML =

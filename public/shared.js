@@ -67,3 +67,7 @@ export function addGoods(elem, arrCat, parent) {
     card.setAttribute('data-goodsID', elem.id)
     parent.appendChild(card);
 }
+
+export function create(tag) {
+    return document.createElement(tag);
+}
