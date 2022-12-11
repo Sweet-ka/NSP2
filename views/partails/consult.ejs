@@ -1,0 +1,40 @@
+<div class="centr_form">
+            
+    <div class="form_order">
+        <div class="form_image">	
+            <div class="background"></div>
+            <h2 class="form_heading">
+                Заявка на консультацию
+                <small>Вам перезвонят в ближайшее время!</small>
+            </h2>
+        </div>
+
+            <form class="card_form"  action="">
+                <label for="name" class="form_input">
+                    <div class="input_label"><span class="required">*</span>Ваше имя</div>
+                    <input id="name" name="name" type="text" class="input_field" required/>
+                </label>
+                <label for="problem" class="form_input">
+                    <div class="input_label">Кратко о Вашей проблеме</div>
+                    <textarea id="problem" name="problem" type="text" class="input_field" required></textarea>
+                </label>
+                <label for="specialist" class="form_input">
+                    <div class="input_label"><span class="required">*</span>Специалист 🌿 NATR.LAB 🌿</div>
+                    <select id="specialist" name="specialist" class="input_field" required>
+                        <option value=""></option>
+                        <option value="Katalina">Екатерина</option>
+                        <option value="other">other</option>
+                    </select>
+                </label>
+                <label for="phone" class="form_input">
+                    <div class="input_label"><span class="required">*</span>Ваш телефон</div>
+                    <input id="phone" name="phone" type="tel" class="input_field" required/>
+                </label>
+                    <button class="action_button send_order">Отправить заявку</button>
+            </form>
+            <div class="card_info">
+                <button class="card_info_btn">Отменить</button>
+                <div id="loader" class="hidden">Отправляем...</div>
+            </div>
+        </div>
+    </div>

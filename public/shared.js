@@ -68,6 +68,11 @@ export function addGoods(elem, arrCat, parent) {
     parent.appendChild(card);
 }
 
-export function create(tag) {
-    return document.createElement(tag);
+export function create(tag, ...cls) {
+    const elem = document.createElement(tag);
+    for (let cl of cls){
+        elem.classList.add(cl);
+    }
+    return elem
 }
+

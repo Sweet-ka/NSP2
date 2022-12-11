@@ -7,6 +7,7 @@ const mysql  = require ( 'mysql2' );
 const config = require('./config/default.json');
 const fs = require ('fs');
 const { constants } = require('fs');
+const { name } = require('ejs');
 
 
 app.set('view engine', 'ejs');
@@ -114,7 +115,6 @@ app.post('/reviews', async(req, res) => {
 
 app.get('/getReviewByID', async(req, res) => {
     const pool = connection_start();
-    console.log(req.query.id)
 
     const treat = new Promise((resolve, rejekt) => {
         pool.query(`SELECT * FROM reviews WHERE id_goods='${req.query.id}'`, function (err, results) {
@@ -136,6 +136,24 @@ app.get('/getgoodsbyid', async(req, res) => {
 
     const treat = new Promise((resolve, rejekt) => {
         pool.query(`SELECT * FROM goods WHERE id='${req.query.id}'`, function (err, results) {
+            if(err) {
+                rejekt(console.log(err));
+            } else {
+                resolve(results);
+            }
+        })
+    })  
+    res.send(await treat);
+    pool.end(()=>{
+        console.log('подключение остановлено')
+    });
+})
+
+app.get('/getuserbyid', async(req, res) => {
+    const pool = connection_start();
+
+    const treat = new Promise((resolve, rejekt) => {
+        pool.query(`SELECT * FROM users WHERE id='${req.query.id}'`, function (err, results) {
             if(err) {
                 rejekt(console.log(err));
             } else {
@@ -175,7 +193,7 @@ app.get('/getgoodsgroup', async(req, res) => {
     const pool = connection_start();
 
     const treat = new Promise((resolve, rejekt) => {
-        pool.query(`SELECT id, groupName, groupCode FROM goodsGroup WHERE 1`, function (err, results) {
+        pool.query(`SELECT id, groupName, groupCode, img_group FROM goodsGroup WHERE 1`, function (err, results) {
             if(err) {
                 rejekt(console.log(err));
             } else {
@@ -209,10 +227,66 @@ app.get('/getgoodscat', async(req, res) => {
     });
 })
 
+app.get('/getarticle', async(req, res) => {
+
+    const pool = connection_start();
+
+    const treat = new Promise((resolve, rejekt) => {
+        pool.query(`SELECT id, image, article_name, article_spoiler, link_for_slider FROM articles WHERE 1`, function (err, results) {
+            if(err) {
+                rejekt(console.log(err));
+            } else {
+                resolve(results);
+            }
+        })
+    })  
+    res.send(await treat);
+    pool.end(()=>{
+        console.log('подключение остановлено')
+    });
+})
+
+app.get('/getarticleforslider', async(req, res) => {
+
+    const pool = connection_start();
+
+    const treat = new Promise((resolve, rejekt) => {
+        pool.query(`SELECT id, image, article_name, article_spoiler, link_for_slider FROM articles ORDER BY id DESC LIMIT 5`, function (err, results) {
+            if(err) {
+                rejekt(console.log(err));
+            } else {
+                resolve(results);
+            }
+        })
+    })  
+    res.send(await treat);
+    pool.end(()=>{
+        console.log('подключение остановлено')
+    });
+})
+
+app.get('/getarticlebyid', async(req, res) => {
+    const pool = connection_start();
+
+    const treat = new Promise((resolve, rejekt) => {
+        pool.query(`SELECT * FROM articles WHERE id='${req.query.id}'`, function (err, results) {
+            if(err) {
+                rejekt(console.log(err));
+            } else {
+                resolve(results);
+            }
+        })
+    })  
+    res.send(await treat);
+    pool.end(()=>{
+        console.log('подключение остановлено')
+    });
+})
+
+
 app.get("*",function(req,res){
     res.render('notfound.ejs');
 });
-
    
 app.listen(3000, function() {
     console.log('work port 3000');

@@ -1,0 +1,28 @@
+
+.telegram {
+    width: 45px;
+}
+
+.about_link {
+    color: #c9af94;
+    text-decoration: underline;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.welcome {
+    font-size: 35px;
+}
+
+.know li {
+    list-style-type: circle;
+    text-align: left;
+}
+
+.know {
+    margin: 20px 0;
+}
+
+.motto {
+    font-size: 24px;
+}

@@ -6,7 +6,13 @@
 @import url("/styles/footer.css");
 @import url("/styles/goods.css");
 @import url("/styles/card.css");
+@import url("/styles/about.css");
+@import url("/styles/natrlab_team.css");
+@import url("/styles/preview.css");
+@import url("/styles/article.css");
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@300&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
 
 :root {
     --background_decor: url(/images/diet-cover.jpeg);
@@ -17,7 +23,7 @@
     font-family: 'Fira sans', sans-serif;
 }
 
-.body {
+body {
     margin: 0 auto;
     box-sizing: border-box;
     font-family:Arial, Helvetica, sans-serif;
@@ -273,3 +279,163 @@ section {
 .review-product {
     font-weight: bold;
 }
+
+
+
+
+input, textarea {
+	appearance: none;
+	border-radius: 0;
+}
+
+.form_order {
+	margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+    height: auto;
+	max-width: 425px;
+	background-color: #fff;
+	border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 0.75rem;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    /* top: 50vh;
+    left: calc(50vw - 212.5px); */
+}
+
+.form_image {
+	border-radius: 8px;
+	overflow: hidden;
+	padding-bottom: 65%;
+	position: relative;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("/images/logo/avatar-1313674484.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 30%;
+    filter: blur(2px);
+    opacity: 50%;
+}
+
+.form_heading {
+	position: absolute;
+	left: 10%;
+	top: 15%;
+	right: 10%;
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: #7A6754;
+	line-height: 1.222;
+}
+	small {
+		display: block;
+		font-size: 0.75em;
+		font-weight: 400;
+		margin-top: 0.25em;
+	}
+
+
+.card_form {
+	padding: 2rem 1rem 0;
+}
+
+.form_input {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	padding-top: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+
+.input_label {
+	color: #8597a3;
+	position: absolute;
+	top: 1.5rem;
+	transition: 0.25s ease;
+    color: #a59c93;
+    transform: translateY(-1.5rem);
+}
+
+.input_field {
+	border: 0;
+	z-index: 1;
+	background-color: transparent;
+	border-bottom: 2px solid #eee;
+	font: inherit;
+	font-size: 1.125rem;
+	padding: 0.25rem 0;
+}
+
+.input_field:focus,
+.input_field:valid {
+	outline: 0;
+	border-bottom-color: #a59c93;
+}
+
+.action_button {
+	margin-top: 2rem;
+	font: inherit;
+	font-size: 1.25rem;
+	padding: 1em;
+	width: 100%;
+	font-weight: 500;
+	background-color: #a59c93;
+	border-radius: 6px;
+	color: #fff;
+	border: 0;
+}
+	.action_button:focus {
+		outline: 0;
+	}
+
+
+.card_info, .card_info_btn {
+	padding: 0.5rem 0.5rem;
+	text-align: center;
+	font-size: 0.875rem;
+	color: #8597a3;
+    border: none;
+    border-radius: 8px;
+}
+.card_info	a {
+		display: block;
+		color: #a59c93;
+		text-decoration: none;
+	}
+
+.hidden {
+    display:none;
+}
+    
+.centr_form {
+    display: none;
+    text-align: center;
+    position: fixed;
+    overflow: scroll;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.2);
+}
+
+.required {
+    color: red;
+}
+
+/* .centr_form::before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      } */
+    

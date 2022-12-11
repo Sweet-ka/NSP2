@@ -1,23 +1,15 @@
-exports.content_blog = [
+content_blog = [
     {
-        title: 'Content 1',
+        title: 'Ольга',
         image: '/images/content/content1.jpeg',
         info: '\
-        Не следует, однако, забывать, что реализация \
-        намеченных плановых заданий способствует подготовке \
-        и реализации новых предложений. Таким образом, экономическая\
-        повестка сегодняшнего дня играет определяющее значение для \
-        экономических и не экономических факторов и перспектив.\
-        Необходимо отметить, что сложившаяся структура организации\
-        играет важную роль в формировании инновационных методов \
-        управления процессами. Стоит понимать, что постоянный\
-        количественный рост и сфера нашей активности выявляет\
-        срочную потребность стандартных подходов. Ко всему прочему, \
-        оптимизация основных целей обеспечивает широкому кругу \
-        специалистов участие в формировании системы массового участия. \
-        В целом, конечно, дальнейшее развитие различных форм \
-        деятельности требуют определения и уточнения дальнейших \
-        направлений развития.\
+        Мой первый результат:\
+        В 29 лет появилось несколько белых пятен на спине, \
+        за четыре года все тело практически, покрылось пятнами, кроме лица, кистей рук и ног ниже коленей. \
+        Бегала по врачам, где мне в один голос говорили, что это не лечится. \
+        Во время очищения жкт, пятна исчезли к концу второго месяца. \
+        Сама не заметила, как загар стал ровно ложиться. \
+        После этого я твёрдо решила что препараты NSP, это то, чем я буду поддерживать свое здоровье всегда!\
         '
     },
     {
@@ -64,39 +56,52 @@ exports.content_blog = [
     },
 ];
 
+// async function addSliderContent() {
+//     const url = `/getarticleforslider`;
+//     const response = await fetch(url);
+//     const el = await response.json();
+//     console.log('el', el)
+//     return createContentSliderArr(el);
+// }
+
+// function createContentSliderArr(elem) {
+//     let content_slider = [];
+
+//     elem.forEach(element => {
+//         let obj = {};
+//         obj.image = element.image;
+//         obj.title = element.article_name;
+//         obj.group = element.article_spoiler;
+//         obj.button = "Подробнее";
+//         if (element.link_for_slider == 'a') {
+//             obj.href = `articles/article?id=${element.id}`
+//         } else {
+//             obj.href = `goods/${element.link_for_slider}`
+//         }
+//         content_slider.push(obj);
+//     });
+
+//     return content_slider;
+// }
 
 content_slider = [
     {
-        title: 'Счастье мамы — здоровый ребёнок',
-        group: 'Наборы и продукты NSP для поддержания детского здоровья',
-        button: 'Купить',
-        image: '/images/content/slider_main_images/child.webp',
+
     },
     {
-        title: 'Здоровье семьи — высшая ценность',
-        group: 'Наборы и продукты NSP для всей семьи',
-        button: 'Купить',
-        image: '/images/content/slider_main_images/family.webp',
-    },
-    {
-        title: 'Для влюбленных в спорт',
-        group: 'Наборы и продукты NSP для активного образа жизни',
-        button: 'Купить',
-        image: '/images/content/slider_main_images/sport.webp',
-    },
-    {
-        title: 'Готовимся стать мамой',
-        group: 'Наборы и продукты NSP для беременных',
-        button: 'Купить',
-        image: '/images/content/slider_main_images/mom.webp',
-    },
-    {
-        title: 'Кожа, волосы, ногти - зеркало здоровья',
-        group: 'Наборы и продукты NSP для красоты',
-        button: 'Купить',
-        image: '/images/content/slider_main_images/mirror.webp',
+        
     }
-];
+]
+
+
+// content_slider = [
+//     {
+
+//     },
+//     {
+
+//     }
+// ]
 
 nutr_text = [
         '\

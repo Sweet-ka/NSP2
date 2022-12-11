@@ -14,6 +14,9 @@
                         <div class="text_label"></div>
                         <div class="text_label_en"></div>
                         <div class="properties"></div>
+                        <ul class="part" style="display: none;">
+                            <h3>В состав набора входит:</h2>
+                        </ul>
                         <div class="price retail_price">
                             <div>Цена:</div> 
                         </div>
@@ -97,10 +100,12 @@
                         </div>
                     </div>
                     <div class="gos">
-                            <div style="align-self: center;">
-                                Свидетельство о государственной регистрации
-                            </div>
-                        <img class="gosreg" style="align-self: center;" src="/images/img/gos/Astragalus.jpeg" alt="">
+                            <a class="CSR">
+                                <div style="align-self: center;">
+                                    Свидетельство о государственной регистрации
+                                </div>
+                                <div class="gosreg"></div>
+                            </a>
                     </div>
                 </div>
                 <div class="card_description_wrapper">
@@ -113,31 +118,13 @@
                         <div class="note"></div>
                     </div>
                     <div class="card_reviews">
-                        <p>здесь будут отзывы</p>
-                        <div class="card_rewiew_slider">
-                            <div class="item">
-                                <img src="img/slide1.jpg" alt="Первый слайд">
-                                <div class="slideText">Заголовок слайда 1</div>
-                            </div>
-                        
-                            <div class="item">
-                                <img src="img/slide2.jpg" alt="Второй слайд">
-                                <div class="slideText">Заголовок слайда 2</div>
-                            </div>
-                        
-                            <div class="item">
-                                <img src="img/slide3.jpg" alt="Третий слайд">
-                                <div class="slideText">Заголовок слайда 3</div>
-                            </div>
-                        
-                            <a class="prev" onclick="minusSlide()">&#10094;</a>
-                            <a class="next" onclick="plusSlide()">&#10095;</a>
+                        <h2>Отзывы о <span class="product"></span></h2>
+                        <div class="card_rewiew_slider">                        
                         </div>
                         
                         <div class="slider-dots">
-                            <span class="slider-dots_item" onclick="currentSlide(1)"></span> 
-                            <span class="slider-dots_item" onclick="currentSlide(2)"></span> 
-                            <span class="slider-dots_item" onclick="currentSlide(3)"></span> 
+                            <a class="prev">&#10094;</a>
+                            <a class="next">&#10095;</a>
                         </div>
                     </div>
                 </div>
@@ -147,40 +134,40 @@
     <%- include('../partails/footer.ejs')%>
     <script type="module" src="/scripts/card.js"></script>
     <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
+        // var slideIndex = 1;
+        // showSlides(slideIndex);
         
-        function plusSlide() {
-            showSlides(slideIndex += 1);
-        }
+        // function plusSlide() {
+        //     showSlides(slideIndex += 1);
+        // }
         
-        function minusSlide() {
-            showSlides(slideIndex -= 1);  
-        }
+        // function minusSlide() {
+        //     showSlides(slideIndex -= 1);  
+        // }
         
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
+        // function currentSlide(n) {
+        //     showSlides(slideIndex = n);
+        // }
         
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("item");
-            var dots = document.getElementsByClassName("slider-dots_item");
-            if (n > slides.length) {
-              slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
+        // function showSlides(n) {
+        //     var i;
+        //     var slides = document.getElementsByClassName("item");
+        //     var dots = document.getElementsByClassName("slider-dots_item");
+        //     if (n > slides.length) {
+        //       slideIndex = 1
+        //     }
+        //     if (n < 1) {
+        //         slideIndex = slides.length
+        //     }
+        //     for (i = 0; i < slides.length; i++) {
+        //         slides[i].style.display = "none";
+        //     }
+        //     for (i = 0; i < dots.length; i++) {
+        //         dots[i].className = dots[i].className.replace(" active", "");
+        //     }
+        //     slides[slideIndex - 1].style.display = "block";
+        //     dots[slideIndex - 1].className += " active";
+        // }
             </script>
         
 </body>

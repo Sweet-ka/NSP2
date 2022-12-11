@@ -19,14 +19,21 @@
     margin: 50px 0;
 }
 
-.gos img {
-    max-width: 90%;
+.part_link {
+    color: #b29b61;
+}
+
+.gosreg {
+    width: 100px;
+    height: 70px;
+    background: url(../images/img/free-icon-stamp-4395979.png) center bottom no-repeat;
+    background-size:contain;
 }
 
 
 .card_field a {
     text-decoration: none;
-    color: black;
+    /* color: black; */
 }
 
 .card_field li {
@@ -119,6 +126,10 @@
 .card_img_wrapper {
     text-align: center;
 }
+
+.card_img_wrapper img {
+    max-width: 500px;
+}
 /* .quality_img::after {
     content: attr(data-title);
     display: none;position: absolute;
@@ -145,12 +156,12 @@
     font-size: 30px;
     position: relative;
     text-decoration: none;
-    width: 100px;
     text-align: center;
 }
 
 .span_distributors_price {
     font-size: 34px;
+    color: #745c2a;
 }
 
 .span_retail_price:before {
@@ -223,20 +234,27 @@
     background-color: #b29b61;
 }
 
-.sertificates_wrapper, .gos {
+.sertificates_wrapper {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 50px;
 }
 
 .gos {
-    gap: 1%;
-    margin: 2%;
     padding: 1%;
     align-self: center;
     text-align: center;
     border: solid 1px #c9af9461;
     cursor: pointer;
+}
+
+.CSR {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review_card_body {
+    margin-top: 10px;
 }
   
 /* Собственно сам слайдер */
@@ -256,50 +274,51 @@
     box-shadow: none !important;
 }
 /* Кнопки вперед и назад */
-.card_rewiew_slider .prev, .card_rewiew_slider .next {
+.slider-dots .prev, .slider-dots .next {
     cursor: pointer;
     position: absolute;
-    top: 0;
-    top: 50%;
     width: auto;
-    margin-top: -22px;
+    margin-top: -28px;
     padding: 16px;
-    color: white;
+    color: #c9af9461;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 40px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
 }
-.card_rewiew_slider .next {
+.slider-dots .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
+.slider-dots .prev {
+    left: 0;
+}
+
 /* При наведении на кнопки добавляем фон кнопок */
-.card_rewiew_slider .prev:hover,
-.card_rewiew_slider .next:hover {
+.slider-dots .prev:hover,
+.slider-dots .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 /* Заголовок слайда */
 .slideText {
     position: absolute;
-    color: #fff;
-    font-size: 35px;
+    color: #000;
+    font-size: 14px;
     /* Выравнивание текста по горизонтали и по вертикали*/
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    /* Тень*/
-    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
-}
+    transform: translate(-50%, -50%);}
 /* Кружочки */
 .slider-dots {
     text-align: center;
+    position: relative;
 }
 .slider-dots_item{
     cursor: pointer;
     height: 12px;
     width: 12px;
     margin: 0 2px;
+    vertical-align: middle;
     background-color: #ddd;
     border-radius: 50%;
     display: inline-block;

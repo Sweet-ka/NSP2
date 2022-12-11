@@ -1,3 +1,4 @@
+import { hits } from "./hits/hits.js";
 import { passLength, alph, createCard, addGoods } from "./shared.js";
 // const entry_reg_btn = document.querySelector('.entry_reg_btn');
 // const entry_btn = document.querySelector('.reg');
@@ -146,6 +147,26 @@ function addHitsFromJson (json) {
     });
 }
 
+
+// async function addSliderHits() {
+//     return createSliderHitsArr(hits);
+// }
+
+async function createSliderHitsArr(arr) {     
+   
+        let arrhits = await arr.reduce(async (akk, element) => {
+            let urlHit = `/getgoodsbyid?id=${element}`;
+            let responsehit = await fetch(urlHit);
+            let hit = await responsehit.json();
+            let akk_then = await akk;
+            akk_then.push(hit[0]);
+            return akk_then
+        }, [])  
+
+    return arrhits
+}
+
+
 const get_hits = fetch('/getgoodsbygroupid');
 const get_hits_res = await get_hits;
 const get_hits_res_json = await get_hits_res.json()
@@ -153,11 +174,13 @@ const get_hits_res_json = await get_hits_res.json()
 const urlCat = '/getgoodscat';
 const responseCat = await fetch(urlCat);
 const arrCat = await responseCat.json();
+createSliderHitsArr(hits)
 
+const arrElem = await createSliderHitsArr(hits);
 addHitsFromServer()
 
-function addHitsFromServer() {    
-    addHits(get_hits_res_json);
+async function addHitsFromServer() {  
+    addHits(arrElem);
     const $slider = document.querySelector('[data-slider="chiefslider"]');
     const slider_hits = new ChiefSlider($slider, {
       loop: true,
@@ -167,14 +190,25 @@ function addHitsFromServer() {
     });
 }
 
-function addHits (arr) {    
+function addHits (arr) {  
+
     const parent = document.querySelector('.slider__items');
+
     arr.forEach(element => {
         let child = document.createElement('div');
         child.classList.add('slider__item')
         parent.appendChild(child);
         addGoods(element, arrCat, child);
-    })
+    });
+
+    // const $slider = document.querySelector('[data-slider="chiefslider"]');
+    // const slider_hits = new ChiefSlider($slider, {
+    //   loop: true,
+    //   autoplay: false,
+    //   interval: 5000,
+    //   refresh: true,
+    // });
+
 }
 
 // // отзывы

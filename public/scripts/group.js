@@ -10,6 +10,9 @@ async function addGroup() {
         let goodsID = Object.values(item)[0];
         let goodsGroup = Object.values(item)[1];
         let goodsCode = Object.values(item)[2];
+        let img_group = Object.values(item)[3];
+
+
         const li = document.createElement('li');
         const a = document.createElement('a');
         const p = document.createElement('p');
@@ -18,6 +21,8 @@ async function addGroup() {
         goods_group_list.appendChild(li);
         li.appendChild(a);
         a.appendChild(p);
+        li.style.background = `url(/images/img_group/${img_group}) center center no-repeat`;
+        li.style.backgroundSize = '60%';
 
         const href = ('/goods/' + goodsCode).toLowerCase();
         a.setAttribute('href', href);
