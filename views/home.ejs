@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <%- include('./partails/head.ejs')%>
-<script defer src="/simple-adaptive-slider.js"></script>
-<script defer src="/slider_hits.js"></script>
-<!-- <script defer src="/header.js"></script> -->
-<!-- <script>
+    <script defer src="/simple-adaptive-slider.js"></script>
+    <script defer src="/slider_hits.js"></script>
+
+    <!-- <script defer src="/header.js"></script> -->
+    <!-- <script>
   document.addEventListener('DOMContentLoaded', function () {
     // инициализация слайдера
     var slider = new ItcSimpleSlider('.itcss', {
@@ -24,51 +24,49 @@
     // });
   });  
 </script> -->
+  </head>
 
-</head>
-
-<body class="body">
+  <body class="body">
     <%- include('./partails/header.ejs')%>
-        <main>
-            <div class="container">
-                <section class="slider">
-                    <%- include('./partails/slider_main.ejs')%>
-                </section>
-                <section class="consult">
-                    <h2 style="margin-left: 50px">Консультация нутрициолога</h2>
-                    <% for (let i=0; i < nutr_text.length; i++) {%>
-                        <p style="text-indent: 50px;">
-                            <%= nutr_text[i] %>
-                        </p>
-                    <%}%>
-                    <div class="consult_btn_wrapper">
-                        <button class="consult_btn">
-                            <a class="consult_link about_nutr" href="/natrlab_team">Специалисты 🌿 NATR.LAB 🌿</a>
-                        </button>
-                        <button class="consult_btn get_consult_btn">
-                            <a class="consult_link get_consult">Получить консультацию</a>
-                        </button>
-                    </div>
-                </section>
-                <section class="slider_hits">
-                    <h2>Хиты продаж</h2>
-                    <%- include('./partails/slider_hits.ejs')%>
-                </section>
-                <section class="reviews">
-                    <%- include('./partails/reviews_home.ejs')%>
-                </section>
-    
-            </div>
-        </main>
-            <%- include('./partails/footer.ejs')%>
-            <%- include('./partails/entry.ejs')%>
-            <%- include('./partails/registr.ejs')%>
-            
-            <div class="block block_reg">
-                
-            </div>
-            <script src="/index.js" type="module">scr</script>
-            <script src="/consult.js" type="module">scr</script>
-</body>
+    <main>
+      <div class="container">
+        <section class="slider">
+          <%- include('./partails/slider_main.ejs')%>
+        </section>
+        <section class="consult">
+          <h2>Консультация нутрициолога</h2>
+          <% for (let i=0; i < nutr_text.length; i++) {%>
+          <p style="text-indent: 50px"><%= nutr_text[i] %></p>
+          <%}%>
+          <div class="consult_btn_wrapper">
+            <button class="consult_btn">
+              <a class="consult_link about_nutr" href="/natrlab_team"
+                >Специалисты 🌿 NATR.LAB 🌿</a
+              >
+            </button>
+            <button class="consult_btn get_consult_btn">
+              <a class="consult_link get_consult">Получить консультацию</a>
+            </button>
+          </div>
+        </section>
+        <section class="slider_hits">
+          <h2>Хиты продаж</h2>
+          <%- include('./partails/slider_hits.ejs')%>
+        </section>
+        <section class="reviews">
+          <%- include('./partails/reviews_home.ejs')%>
+        </section>
+      </div>
+    </main>
+    <%- include('./partails/footer.ejs')%> <%- include('./partails/entry.ejs')%>
+    <%- include('./partails/registr.ejs')%>
 
+    <div class="block block_reg"></div>
+    <script src="/index.js" type="module">
+      scr
+    </script>
+    <script src="/consult.js" type="module">
+      scr
+    </script>
+  </body>
 </html>

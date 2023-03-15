@@ -1,54 +1,60 @@
 <div class="reviews_home">
-    <div class="reviews_wrap">
-        <h2>Отзывы партнеров и покупателей</h2>
-        <h2>Отзывы о продукции</h2>
-        <div class="old_reviews">
-            <% for (let i=0; i < 4; i++) {%>
-                    <div class="review_card">
-                        <div class="review_user">
-                            <div class="review_user_avatar"></div>
-                            <div class="review_user_data">
-                                <div class="review_user_name">review_user_name</div>
-                                <!-- <div class="review_user_goods">review_user_goods</div> -->
-                            </div>
-                        </div>
-                        <div class="review_card_body">
-                            <p class="review_card_text"></p>
-                            <!-- <button class="review_btn consult_btn">
+  <div class="reviews_wrap">
+    <h2>Отзывы о продукции</h2>
+    <h2>Новый отзыв</h2>
+    <div class="old_reviews">
+      <% for (let i=0; i < 4; i++) {%>
+      <div class="review_card">
+        <div class="review_user">
+          <div class="review_user_avatar" <%="id=" +'avatar_'+i %>></div>
+          <div class="review_user_data">
+            <div class="review_user_name" <%="id=" +'name_'+i %>>review_user_name</div>
+            <!-- <div class="review_user_goods">review_user_goods</div> -->
+          </div>
+        </div>
+        <div class="review_card_body">
+          <p class="review_card_text" <%="id=" +'text_'+i %>></p>
+          <!-- <button class="review_btn consult_btn">
                                 <a href="" class="consult_link">Перейти на страницу продукта</a>
                             </button> -->
-                        </div>
-                    </div>
-            <%}%>
         </div>
-        <div class="new_review">
-            <h4>Новый отзыв</h4>
-            <div class="new_review_card">
-                <div class="new_review_goods">
-                    <div class="new_review_goods_photo">
-                        <img style="height: 150px;" src="/images/photo_goods/id_3.webp" alt="">
-                    </div>
-                    <div class="new_review_goods_data">
-                        <div class="card-title new_review_goods_name">Сок Алоэ Вера НСП</div>
-                        <!-- <div class="review_user_goods">review_user_goods</div> -->
-                    </div>
-                </div>
-                <div class="new_review_card_body">
-                    <div class="new_review_user_name">review_user_name</div>
-                    <p class="new_review_card_text">Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Разнообразный и богатый опыт консультация с широким активом обеспечивает широкому кругу. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
-
-                    </p>
-                    <!-- <button class="review_btn consult_btn">
+      </div>
+      <%}%>
+    </div>
+    <div class="new_review">
+      <div class="new_review_card">
+        <div class="new_review_goods">
+          <div class="new_review_goods_photo">
+            <a class="new_review_goods_link" href=""
+              ><img
+                class="new_review_goods_photo_img"
+                style="height: 150px"
+                alt=""
+            /></a>
+          </div>
+          <div class="new_review_goods_data">
+            <div class="card-title new_review_goods_name"></div>
+            <!-- <div class="review_user_goods">review_user_goods</div> -->
+          </div>
+        </div>
+        <div class="new_review_card_body">
+          <div class="new_review_user_name">review_user_name</div>
+          <p class="new_review_card_text"></p>
+          <!-- <button class="review_btn consult_btn">
                         <a href="" class="consult_link">Перейти на страницу продукта</a>
                     </button> -->
-                </div>
-            </div>
-
         </div>
+      </div>
     </div>
-<div class="read_all">
+  </div>
+  <div class="read_all">
     <div>
-        <a href="/reviews" class="btn btn-primary" style="display: block; height: 100%;">Читать все отзывы</a>
+      <a
+        href="/reviews"
+        class="btn btn-primary"
+        style="display: block; height: 100%"
+        >Читать все отзывы</a
+      >
     </div>
-</div>
+  </div>
 </div>

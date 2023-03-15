@@ -1,28 +1,33 @@
-
 .telegram {
-    width: 45px;
+  width: 45px;
 }
 
 .about_link {
-    color: #c9af94;
-    text-decoration: underline;
-    font-size: 18px;
-    cursor: pointer;
+  color: #c9af94;
+  text-decoration: underline;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .welcome {
-    font-size: 35px;
+  font-size: 35px;
 }
 
 .know li {
-    list-style-type: circle;
-    text-align: left;
+  list-style-type: circle;
+  text-align: left;
 }
 
 .know {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .motto {
-    font-size: 24px;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 380px) {
+  .welcome {
+    font-size: 26px;
+  }
 }
